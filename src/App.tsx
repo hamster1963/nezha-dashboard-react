@@ -25,11 +25,47 @@ const App: React.FC = () => {
         <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 bg-muted/50 flex-col gap-4">
           <Header />
           <Routes>
-            <Route path="/" element={<Server />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="/task" element={<Task />} />
-            <Route path="/alarm" element={<Alarm />} />
-            <Route path="/intranet" element={<Intranet />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/"
+              element={
+                <PrivateRoute>
+                  <Server />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/service"
+              element={
+                <PrivateRoute>
+                  <Service />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/task"
+              element={
+                <PrivateRoute>
+                  <Task />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/alarm"
+              element={
+                <PrivateRoute>
+                  <Alarm />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/intranet"
+              element={
+                <PrivateRoute>
+                  <Intranet />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="/setting"
               element={
@@ -38,17 +74,14 @@ const App: React.FC = () => {
                 </PrivateRoute>
               }
             />
-            <Route path="/user" element={<User />} />
-            <Route path="/login" element={<Login />} />
-            {/* <Route
-              path="/dashboard"
+            <Route
+              path="/user"
               element={
                 <PrivateRoute>
-                  <Dashboard />
-                  <>fine</>
+                  <User />
                 </PrivateRoute>
               }
-            /> */}
+            />
           </Routes>
           <Footer />
         </main>

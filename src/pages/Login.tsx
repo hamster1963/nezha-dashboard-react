@@ -62,7 +62,7 @@ export default function Login() {
         )}
         <p className="text-base font-semibold">请先登录</p>
         <input
-          className="px-1 border-[1px] rounded-[5px] placeholder:text-sm placeholder:text-muted-foreground"
+          className="px-1 border-[1px] bg-stone-100 dark:bg-stone-800 rounded-[5px] placeholder:text-sm placeholder:text-muted-foreground"
           name="username"
           type="text"
           placeholder="用户名"
@@ -70,7 +70,7 @@ export default function Login() {
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          className="px-1 border-[1px] rounded-[5px] placeholder:text-sm placeholder:text-muted-foreground"
+          className="px-1 border-[1px] bg-stone-100 dark:bg-stone-800 rounded-[5px] placeholder:text-sm placeholder:text-muted-foreground"
           name="password"
           type="password"
           placeholder="密码"
