@@ -38,38 +38,39 @@ export interface ModelServer {
 }
 
 export interface ModelHost {
-  arch: string;
-  bootTime: number;
-  countryCode: string;
-  cpu: string[];
-  diskTotal: number;
-  gpu: string[];
-  memTotal: number;
-  platform: string;
-  platformVersion: string;
-  swapTotal: number;
-  version: string;
-  virtualization: string;
+  arch?: string;
+  boot_time?: number;
+  country_code?: string;
+  cpu?: string[];
+  disk_total?: number;
+  gpu?: string[];
+  ip?: string;
+  mem_total?: number;
+  platform?: string;
+  platform_version?: string;
+  swap_total?: number;
+  version?: string;
+  virtualization?: string;
 }
 
 export interface ModelHostState {
   cpu?: number;
-  diskUsed: number;
-  gpu: number[];
-  load1: number;
-  load15: number;
-  load5: number;
-  memUsed: number;
-  netInSpeed: number;
-  netInTransfer: number;
-  netOutSpeed?: number;
-  netOutTransfer: number;
-  processCount: number;
-  swapUsed: number;
-  tcpConnCount: number;
-  temperatures: ModelSensorTemperature[];
-  udpConnCount: number;
-  uptime: number;
+  disk_used?: number;
+  gpu?: number[];
+  load_1?: number;
+  load_15?: number;
+  load_5?: number;
+  mem_used?: number;
+  net_in_speed?: number;
+  net_in_transfer?: number;
+  net_out_speed?: number;
+  net_out_transfer?: number;
+  process_count?: number;
+  swap_used?: number;
+  tcp_conn_count?: number;
+  temperatures?: ModelSensorTemperature[];
+  udp_conn_count?: number;
+  uptime?: number;
 }
 
 export interface ModelSensorTemperature {
