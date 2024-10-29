@@ -285,7 +285,9 @@ function UserDataTable() {
                     toast.error("不能删除当前用户");
                     return;
                   }
-                  deleteUserMutation.mutate([userRow.id]);
+                  if (confirm("确定要删除用户吗？")) {
+                    deleteUserMutation.mutate([userRow.id]);
+                  }
                 }}
               >
                 删除
